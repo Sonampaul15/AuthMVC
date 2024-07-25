@@ -1,0 +1,40 @@
+﻿@model ConsumeAuthPractice.DTO.RegiResponseDto
+
+<a asp-action="Index" asp-controller="Home" class="btn btn-primary"> Back To View</a>
+<form method="post" asp-action="RegisterUser">
+    <div class="col-md-10">
+        <div>
+            <label>Name</label>
+            <input type="text" class="form-control" asp-for="Firstname" />
+        </div>
+        <div>
+            <label>LastName</label>
+            <input type="text" class="form-control" asp-for="Lastname" />
+        </div>
+       
+        <div>
+            <label>Mobile</label>
+            <input type="text" class="form-control" asp-for="Phonenumber" />
+        </div>
+        <div>
+            <label> Email</label>
+            <input type="text" class="form-control" asp-for="Email" />
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="text" class="form-control" asp-for="Password" />
+        </div>
+        <div>
+            <label>Roles</label>
+            <select asp-for="Role" class="form-control" asp-items="ViewBag.RoleList">
+                <option disabled selected>--Select Roles--</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success">Save</button>
+        </div>
+    </div>
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,25 @@
+﻿@model ConsumeAuthPractice.DTO.LogineRequestDto
+<form method="post">
+    <div class="container border p-4">
+        <div class="row text-center">
+            <h2>Login</h2>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-12 col-md-6 offset-md-3 pb-2">
+                <input type="text" asp-for="Username" class="form-control" placeholder="UserName..." />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="col-12 col-md-6 offset-md-3 pb-2">
+                <input type="password" asp-for="Password" class="form-control" placeholder="Password..." />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="col-12 col-md-6 offset-md-3 pb-2">
+                <button type="submit" class="btn form-control btn-success" value="Submit">Login</button>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
